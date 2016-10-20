@@ -1,0 +1,30 @@
+<h1>{{title}}</h1>
+
+<section>
+    <p>Your user are: </p>
+    <article id="users-list"></article>
+</section>
+
+<script>
+    var ajaxObj = {
+        url: 'https://js-server-victoria.herokuapp.com/users',
+        type: 'get',
+        dataType: 'json',
+        success: function (data) {
+            console.log(data);
+            var list = $('#users-list');
+            for (var user in data) {
+                var account = data[user];
+                var li = $('<li>');
+                $li
+            }
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    };
+    $(document).ready(function(event) {
+    $.ajax(ajaxObj);
+    });
+
+</script>
